@@ -5,151 +5,210 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>책플리 | 메인</title>
 
+  <style>
+/*메인*/
+.hero-section{
+  min-height: calc(100vh - 86px); 
+  padding: 20px 0;
+}
+
+/* 책 */
+.book-wrap{ text-decoration:none; }
+.book-deco{ position:relative; width:min(520px,100%); margin:0 auto; }
+.book-card{
+  width: min(640px, 100%);
+  aspect-ratio: 4 / 5;
+  background: rgba(36,75,58,.95);
+  border: 6px solid rgba(0,0,0,.18);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 22px 50px rgba(0,0,0,.28);
+  transition: transform .15s;
+}
+.book-card:hover{
+  transform: translateY(-4px);
+}
+
+.book-top{
+  height: 40px;
+  background: rgba(255,255,255,.95);
+}
+
+.book-face{
+  padding: 80px 22px 36px;
+  text-align: center;
+}
+
+.book-title{
+  color: var(--gold);
+  font-weight: 900;
+  font-size: 68px;
+  margin-bottom: 18px;
+}
+
+.book-sub{
+  color: rgba(198,161,90,.85);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/*책 아래 버튼*/
+.btn-stack{
+  margin-top: 48px;
+}
+
+.tip-btn{
+  background: rgba(198,161,90,.88);
+  border: 1px solid rgba(0,0,0,.1);
+  color: rgba(36,75,58,.95);
+  font-weight: 900;
+  padding: 16px 12px;
+}
+.tip-btn:hover{
+  color: var(--accent);
+}
+
+/* 소개 섹션 */
+#about{
+  padding-top: 80px;
+}
+
+  </style>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- ===== NAV: 상단엔 4개만 노출, hover 시 dropdown 표시 ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark topbar fixed-top">
+  <div class="container-fluid px-4">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- 책플리 이동 -->
+    <a class="navbar-brand brandbox" href="index.html">책플리</a>
 
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav mx-auto gap-lg-4">
+    <!--메뉴 -->
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav gap-lg-4 align-items-lg-start">
 
-          <!-- 1) About -->
-          <li class="nav-item dropdown hover-dd">
-            <a class="nav-link dropdown-toggle" href="about.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              About
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="about.html">북플리는?</a></li>
-            </ul>
-          </li>
+        <!-- About -->
+        <li class="nav-item dropdown hover-dd">
+          <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown">
+            About
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="index.html#about">북플리는?</a></li>
+          </ul>
+        </li>
 
-          <!-- 2) BookPlaylist -->
-          <li class="nav-item dropdown hover-dd">
-            <a class="nav-link dropdown-toggle" href="bookplaylist.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              BookPlaylist
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="forest.html">숲</a></li>
-              <li><a class="dropdown-item" href="sea.html">바다</a></li>
-              <li><a class="dropdown-item" href="city.html">도시</a></li>
-              <li><a class="dropdown-item" href="fantasy.html">판타지</a></li>
-            </ul>
-          </li>
+        <!-- BookPlaylist -->
+        <li class="nav-item dropdown hover-dd">
+          <a class="nav-link dropdown-toggle" href="bookplaylist.html" >
+            BookPlaylist
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="forest.html">숲</a></li>
+            <li><a class="dropdown-item" href="sea.html">바다</a></li>
+            <li><a class="dropdown-item" href="urban.html">도시</a></li>
+            <li><a class="dropdown-item" href="fantasy.html">판타지</a></li>
+          </ul>
+        </li>
 
-          <!-- 3) Reading Tip -->
-          <li class="nav-item dropdown hover-dd">
-            <a class="nav-link dropdown-toggle" href="tips.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Reading Tip
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="tips.html#choose-book">책 고르기</a></li>
-              <li><a class="dropdown-item" href="tips.html#hobby-tip">취미 독서를 위한 꿀팁</a></li>
-            </ul>
-          </li>
+        <!-- Reading Tip -->
+        <li class="nav-item dropdown hover-dd">
+          <a class="nav-link dropdown-toggle" href="tips.html">
+            Reading Tip
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="tips.html#choose-book">책 고르기</a></li>
+            <li><a class="dropdown-item" href="tips.html#hobby-tip">취미 독서를 위한 꿀팁</a></li>
+          </ul>
+        </li>
 
-          <!-- 4) Community -->
-          <li class="nav-item dropdown hover-dd">
-            <a class="nav-link dropdown-toggle" href="community.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Community
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="community.html#my-playlist">나의 책플리</a></li>
-              <li><a class="dropdown-item" href="community.html#items">독서 아이템 공유</a></li>
-            </ul>
-          </li>
+        <!-- Community -->
+        <li class="nav-item dropdown hover-dd">
+          <a class="nav-link dropdown-toggle" href="community.html">
+            Community
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="community.html#my-playlist">나의 책플리</a></li>
+          </ul>
+        </li>
 
-        </ul>
-
-        <a class="btn btn-login" href="#">로그인</a>
-      </div>
+      </ul>
     </div>
+
+    <!-- 오른쪽 끝: 로그인 -->
+    <a class="btn btn-login ms-3" href="#">로그인</a>
+
+  </div>
   </nav>
 
-  <!-- ===== MAIN ===== -->
+
+  <!-- 메인 -->
   <header class="hero-section">
     <div class="container">
-      <div class="row align-items-center gy-4">
+   <div class="row min-vh-100 justify-content-center align-items-center">
+    <div class="col-lg-6 text-center d-flex flex-column align-items-center">
 
-        <div class="col-lg-3">
-          <div class="main-label">메인 화면</div>
+  <!-- 책 -->
+  <a class="book-wrap d-inline-block" href="bookplaylist.html">
+    <div class="book-deco">
+      <div class="book-card">
+        <div class="book-top"></div>
+        <div class="book-face">
+          <h1 class="book-title">책플리</h1>
+          <p class="book-sub">
+            어떤 공간으로 떠나 볼까요?<br>
+            <span>&gt; 책을 클릭해 독서를 시작해 보세요</span>
+          </p>
         </div>
-
-        <div class="col-lg-6 text-center">
-          <!-- 책 클릭하면 테마 선택 페이지로 이동 -->
-          <a class="book-wrap d-inline-block" href="bookplaylist.html" aria-label="테마 선택으로 이동">
-            <div class="book-deco">
-              <div class="book-card">
-                <div class="book-top"></div>
-                <div class="book-face">
-                  <h1 class="book-title">책플리</h1>
-                  <p class="book-sub">
-                    어떤 공간으로 떠나 볼까요?<br>
-                    <span>&gt; 책을 클릭해 독서를 시작해 보세요</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <p class="scroll-hint mt-4 mb-0">-</p>
-        </div>
-
-        <div class="col-lg-3">
-          <div class="d-flex flex-column gap-3 align-items-stretch">
-            <!-- 왼쪽 버튼: 책 고르기 페이지(요청대로 별도 html로 가고 싶으면 choose.html로 바꿔도 됨) -->
-            <a class="btn tip-btn" href="tips.html#choose-book">
-              읽을 책을 아직<br>고르지 못했어요
-            </a>
-
-            <!-- 오른쪽 버튼: 취미 독서 꿀팁 섹션 -->
-            <a class="btn tip-btn" href="tips.html#hobby-tip">
-              독서 취미를 즐기는<br>팁을 더 알고 싶어요
-            </a>
-          </div>
-        </div>
-
       </div>
     </div>
-  </header>
+  </a>
 
-  <!-- ===== 사이트 소개 (메인 아래 섹션) ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>사이트 소개</h2>
+  <!-- 책 아래 버튼 영역 -->
+  <div class="btn btn-outline-success">책 읽을 준비</button>
+    <a class="btn tip-btn w-100 mb-3" href="tips.html#choose-book">
+      책 고르러 가기
+    </a>
+    <a class="btn tip-btn w-100" href="tips.html#hobby-tip">
+      독서 취미를 즐기는<br>팁 알아보기
+    </a>
+  </div>
+
+</div>
+
+  <!-- 사이트 소개-->
+   <section class="container py-5" id="about">
+        <div class="text-center py-5">
+            <h2 class="fw-bold">북플리는?</h2>
         <p>공간 컨셉에 맞춘 몰입용 플레이리스트를 고르는 곳</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
           <div class="glass-card p-4 h-100">
-            <h5 style="color:var(--gold); font-weight:800;">1) 공간부터 선택</h5>
+            <h5 style="color:var(--gold); font-weight:800;">오늘 빠져들 공간 고르기</h5>
             <p style="color:var(--muted); line-height:1.7;" class="mb-0">
-              숲·바다·도시·판타지. 분위기 선택이 곧 독서 시작.
+              숲·바다·도시·판타지. 분위기 선택이 곧 독서의 시작!
             </p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
           <div class="glass-card p-4 h-100">
-            <h5 style="color:var(--gold); font-weight:800;">2) 몰입용 무드</h5>
+            <h5 style="color:var(--gold); font-weight:800;">과몰입을 돕는 음악</h5>
             <p style="color:var(--muted); line-height:1.7;" class="mb-0">
-              조명/공간감/리듬을 떠올리게 하는 테마 플레이리스트.
+              상상 속 이상적인 독서 공간을 떠올리게 하는 테마 플레이리스트.
             </p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
           <div class="glass-card p-4 h-100">
-            <h5 style="color:var(--gold); font-weight:800;">3) 커뮤니티 공유</h5>
+            <h5 style="color:var(--gold); font-weight:800;">커뮤니티 공유</h5>
             <p style="color:var(--muted); line-height:1.7;" class="mb-0">
-              나만의 책플리와 독서 아이템을 가볍게 남기기.
+              나만의 책플리와 독서 아이템을 가볍게 남기고 공유해보세요.
             </p>
           </div>
         </div>
@@ -167,4 +226,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
