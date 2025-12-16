@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>책플리 | BookPlaylist</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark topbar">
+  <div class="container">
+    <a class="navbar-brand brandbox" href="about.html">로고</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="bookplaylist.html" role="button" data-bs-toggle="dropdown">
+            BookPlaylist
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="forest.html">숲</a></li>
+            <li><a class="dropdown-item" href="sea.html">바다</a></li>
+            <li><a class="dropdown-item" href="city.html">도시</a></li>
+            <li><a class="dropdown-item" href="fantasy.html">판타지</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="tips.html" role="button" data-bs-toggle="dropdown">
+            Reading Tip
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="tips.html#choose-book">책 고르기</a></li>
+            <li><a class="dropdown-item" href="tips.html#hobby-tip">취미 독서를 위한 꿀팁</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="community.html" role="button" data-bs-toggle="dropdown">
+            Community
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="community.html#my-playlist">나의 책플리</a></li>
+            <li><a class="dropdown-item" href="community.html#items">독서 아이템 공유</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <a class="btn btn-login" href="#">로그인</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <h1 class="page-title">BookPlaylist</h1>
+    <p class="page-desc">공간 컨셉을 선택하세요. 각 컨셉은 다른 HTML 페이지로 이동합니다.</p>
+  </div>
+</header>
+
+<main class="py-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="theme-card h-100">
+          <h3>숲</h3>
+          <p>오두막 / 정원</p>
+          <a class="stretched-link" href="forest.html" aria-label="숲 페이지 이동"></a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="theme-card h-100">
+          <h3>바다</h3>
+          <p>여름 바다 / 겨울 바다</p>
+          <a class="stretched-link" href="sea.html" aria-label="바다 페이지 이동"></a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="theme-card h-100">
+          <h3>도시</h3>
+          <p>구석 카페 / 밤거리</p>
+          <a class="stretched-link" href="city.html" aria-label="도시 페이지 이동"></a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="theme-card h-100">
+          <h3>판타지</h3>
+          <p>마법 도서관 / 연구실</p>
+          <a class="stretched-link" href="fantasy.html" aria-label="판타지 페이지 이동"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container d-flex justify-content-between flex-wrap gap-2">
+    <small>© 2025 BookPlaylist</small>
+    <small>BookPlaylist 페이지</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

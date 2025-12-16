@@ -1,0 +1,319 @@
+:root{
+  --bg:#4b4339;
+  --deep:#244b3a;
+  --deep2:#1a2f2a;
+  --gold:#c6a15a;
+  --ivory:#f3efe6;
+  --muted:rgba(243,239,230,.72);
+  --accent:#f08c6e; /* hover 포인트 */
+}
+
+html{ scroll-behavior:smooth; }
+
+body{
+  background:var(--bg);
+  color:var(--ivory);
+  font-family: system-ui, -apple-system, "Pretendard", "Noto Serif KR", sans-serif;
+}
+
+/* NAV */
+.topbar{
+  background: rgba(30,25,20,.35);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(198,161,90,.22);
+}
+
+.brandbox{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:132px;
+  height:56px;
+  background: rgba(36,75,58,.92);
+  border: 1px solid rgba(198,161,90,.22);
+  color: var(--gold) !important;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.navbar .nav-link{
+  color: rgba(198,161,90,.9);
+  font-weight:700;
+  letter-spacing:.5px;
+  transition:.15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active{
+  color: var(--accent);
+}
+
+.dropdown-menu{
+  border: 1px solid rgba(198,161,90,.18);
+}
+
+.btn-login{
+  background: rgba(36,75,58,.92);
+  color: var(--gold);
+  border: 1px solid rgba(198,161,90,.22);
+  font-weight:700;
+}
+.btn-login:hover{
+  color: var(--accent);
+}
+
+/* SECTION */
+.page-hero{
+  padding: 48px 0 16px;
+}
+.page-title{
+  color: var(--gold);
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.page-desc{
+  color: var(--muted);
+  max-width: 860px;
+  line-height: 1.7;
+}
+
+.glass-card{
+  background: rgba(0,0,0,.12);
+  border: 1px solid rgba(198,161,90,.22);
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.theme-card{
+  position:relative;
+  background: rgba(36,75,58,.55);
+  border: 1px solid rgba(198,161,90,.22);
+  border-radius: 14px;
+  padding: 20px 18px;
+  min-height: 160px;
+  transition: .15s;
+}
+.theme-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(240,140,110,.45);
+}
+.theme-card h3{
+  margin:0 0 6px;
+  color: var(--gold);
+  font-weight:800;
+}
+.theme-card p{ margin:0; color: var(--muted); }
+
+/* Footer */
+.footer{
+  margin-top: 60px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(198,161,90,.18);
+  background: rgba(0,0,0,.08);
+  color: var(--muted);
+}
+/* 상단바 기본(기존에 있으면 유지) */
+:root{
+  --bg:#4b4339;
+  --deep:#244b3a;
+  --gold:#c6a15a;
+  --ivory:#f3efe6;
+  --muted:rgba(243,239,230,.72);
+  --accent:#f08c6e;
+}
+
+body{ background:var(--bg); color:var(--ivory); padding-top: 78px; }
+
+/* NAV */
+.topbar{
+  background: rgba(30,25,20,.35);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(198,161,90,.22);
+}
+.brandbox{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:132px; height:56px;
+  background: rgba(36,75,58,.92);
+  border: 1px solid rgba(198,161,90,.22);
+  color: var(--gold) !important;
+  font-weight:700; letter-spacing:1px;
+}
+.navbar .nav-link{
+  color: rgba(198,161,90,.9);
+  font-weight:700;
+  letter-spacing:.5px;
+  transition:.15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus{
+  color: var(--accent);
+}
+
+.btn-login{
+  background: rgba(36,75,58,.92);
+  color: var(--gold);
+  border: 1px solid rgba(198,161,90,.22);
+  font-weight:700;
+}
+.btn-login:hover{ color: var(--accent); }
+
+/* ✅ 핵심: hover 시 dropdown-menu 보이게 */
+.hover-dd:hover > .dropdown-menu{
+  display: block;
+  margin-top: 0; /* 뜨는 위치 흔들림 방지 */
+}
+
+/* 드롭다운 메뉴 스타일(선택) */
+.dropdown-menu{
+  border: 1px solid rgba(198,161,90,.18);
+}
+.dropdown-item{
+  color: rgba(198,161,90,.95);
+}
+.dropdown-item:hover{
+  background: rgba(240,140,110,.12);
+  color: var(--accent);
+  font-weight: 800;
+}
+
+/* ===== 메인 화면(스케치 느낌) ===== */
+.hero-section{ padding: 28px 0 40px; }
+.main-label{
+  display:inline-block;
+  background: var(--ivory);
+  color: var(--gold);
+  font-weight:900;
+  font-size: 56px;
+  padding: 10px 16px;
+  line-height: 1;
+}
+
+.scroll-hint{ color: var(--accent); font-weight: 800; }
+
+.book-wrap{ text-decoration:none; }
+.book-deco{ position:relative; width:min(520px,100%); margin:0 auto; }
+.book-card{
+  position:relative;
+  width:100%;
+  max-width:520px;
+  aspect-ratio: 5/6;
+  border-radius:18px;
+  background: rgba(36,75,58,.96);
+  border: 8px solid rgba(20,40,30,.35);
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  overflow:hidden;
+  transition: transform .15s;
+}
+.book-wrap:hover .book-card{ transform: translateY(-3px); }
+
+.book-top{ height:34px; background:#f1f1f1; }
+.book-face{ padding: 64px 22px 34px; text-align:center; }
+.book-title{
+  margin:0 0 14px;
+  font-weight:900;
+  letter-spacing:2px;
+  color: var(--gold);
+  font-size: clamp(42px, 5vw, 58px);
+}
+.book-sub{ margin:0; color: rgba(198,161,90,.85); font-weight: 700; }
+.book-sub span{ color: rgba(198,161,90,.75); }
+
+/* 월계(간단 도형) */
+.laurel{
+  position:absolute;
+  top:18%; bottom:8%;
+  width:42%;
+  border: 10px solid rgba(198,161,90,.65);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 999px;
+  pointer-events:none;
+}
+.laurel.left{ left:-6%; transform: rotate(-8deg); }
+.laurel.right{ right:-6%; transform: rotate(8deg); }
+
+/* 버튼 */
+.tip-btn{
+  background: rgba(198,161,90,.85);
+  border: 1px solid rgba(0,0,0,.1);
+  color: rgba(36,75,58,.95);
+  font-weight: 900;
+  padding: 18px 14px;
+}
+.tip-btn:hover{
+  background: rgba(198,161,90,.95);
+  color: var(--accent);
+}
+
+/* 소개 카드 */
+.section{ padding: 60px 0; }
+.section-title h2{ color: var(--gold); font-weight:900; margin:0 0 6px; }
+.section-title p{ color: var(--muted); margin:0 0 22px; }
+.glass-card{
+  background: rgba(0,0,0,.12);
+  border: 1px solid rgba(198,161,90,.22);
+  border-radius:14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+.footer{
+  margin-top: 40px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(198,161,90,.18);
+  background: rgba(0,0,0,.08);
+  color: var(--muted);
+}
+/* ===== 테마 선택(포스터) ===== */
+.theme-poster{
+  display:block;
+  text-decoration:none;
+  border-radius: 10px;
+  overflow:hidden;
+  border: 1px solid rgba(198,161,90,.22);
+  box-shadow: 0 12px 30px rgba(0,0,0,.18);
+  background: rgba(0,0,0,.10);
+  transition: transform .15s, border-color .15s;
+}
+.theme-poster:hover{
+  transform: translateY(-3px);
+  border-color: rgba(240,140,110,.45);
+}
+
+.poster-img{
+  height: 380px;           /* 세로 포스터 느낌 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* ✅ 실제 이미지로 바꾸려면 여기 url(...)만 교체 */
+.poster-forest{  background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("img/forest.jpg"); }
+.poster-sea{    background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("img/sea.jpg"); }
+.poster-city{   background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("img/city.jpg"); }
+.poster-fantasy{background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("img/fantasy.jpg"); }
+
+.poster-cap{
+  padding: 14px 12px;
+  background: rgba(36,75,58,.35);
+}
+.poster-title{
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: .5px;
+}
+.poster-desc{
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* 포스터 위 라벨(바다 카드 가운데 글씨 느낌) */
+.poster-badge{
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(198,161,90,.95);
+  font-weight: 900;
+  padding: 8px 14px;
+  border: 1px solid rgba(198,161,90,.35);
+  background: rgba(0,0,0,.18);
+  border-radius: 6px;
+}

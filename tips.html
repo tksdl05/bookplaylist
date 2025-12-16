@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>책플리 | Reading Tip</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark topbar">
+  <div class="container">
+    <a class="navbar-brand brandbox" href="about.html">로고</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="bookplaylist.html" role="button" data-bs-toggle="dropdown">BookPlaylist</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="forest.html">숲</a></li>
+            <li><a class="dropdown-item" href="sea.html">바다</a></li>
+            <li><a class="dropdown-item" href="city.html">도시</a></li>
+            <li><a class="dropdown-item" href="fantasy.html">판타지</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="tips.html" role="button" data-bs-toggle="dropdown">Reading Tip</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#choose-book">책 고르기</a></li>
+            <li><a class="dropdown-item" href="#hobby-tip">취미 독서를 위한 꿀팁</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="community.html" role="button" data-bs-toggle="dropdown">Community</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="community.html#my-playlist">나의 책플리</a></li>
+            <li><a class="dropdown-item" href="community.html#items">독서 아이템 공유</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <a class="btn btn-login" href="#">로그인</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <h1 class="page-title">Reading Tip</h1>
+    <p class="page-desc">독서가 더 쉬워지도록, 바로 적용 가능한 팁을 모아둔 페이지(섹션 이동 방식)</p>
+  </div>
+</header>
+
+<main class="py-4">
+  <div class="container">
+
+    <section id="choose-book" class="mb-5">
+      <h2 class="page-title" style="font-size:1.6rem;">책 고르기</h2>
+      <p class="page-desc">여기에 카드/리스트로 팁 추가</p>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100">
+            <h5 style="color:var(--gold); font-weight:800;">10분 규칙</h5>
+            <p style="color:var(--muted); line-height:1.7;" class="mb-0">10분만 읽고 계속 읽고 싶으면 유지.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100">
+            <h5 style="color:var(--gold); font-weight:800;">목차/첫 문장</h5>
+            <p style="color:var(--muted); line-height:1.7;" class="mb-0">표지보다 글의 리듬을 먼저 확인.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100">
+            <h5 style="color:var(--gold); font-weight:800;">키워드 3개</h5>
+            <p style="color:var(--muted); line-height:1.7;" class="mb-0">예: ‘도시/밤/잔잔’처럼 좁히기.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobby-tip">
+      <h2 class="page-title" style="font-size:1.6rem;">취미 독서를 위한 꿀팁</h2>
+      <p class="page-desc">도서관/저렴하게 보는 법/루틴 등</p>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="glass-card p-4 h-100">
+            <h5 style="color:var(--gold); font-weight:800;">도서관 이용</h5>
+            <ul class="mb-0" style="color:var(--muted); line-height:1.8;">
+              <li>상호대차/예약 확인</li>
+              <li>연장 규칙 체크</li>
+              <li>좋은 시간대 찾기</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="glass-card p-4 h-100">
+            <h5 style="color:var(--gold); font-weight:800;">책 싸게 보는 법</h5>
+            <ul class="mb-0" style="color:var(--muted); line-height:1.8;">
+              <li>중고 거래</li>
+              <li>전자도서관</li>
+              <li>대여/구독 확인</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <a class="btn btn-login" href="#choose-book">↑ 책 고르기 섹션으로</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container d-flex justify-content-between flex-wrap gap-2">
+    <small>© 2025 BookPlaylist</small>
+    <small>Reading Tip 페이지</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
